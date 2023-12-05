@@ -19,6 +19,19 @@ namespace Challenge_10
             }
         }
 
+        public Int64 GetSource(Int64 destination)
+        {
+            foreach (var s in _sets)
+            {
+                if (destination >= s.Destination && destination < s.Destination + s.Range)
+                {
+                    return s.Source + (destination - s.Destination);
+                }
+            }
+
+            return destination;
+        }
+
         public Int64 GetDestination(Int64 source)
         {
             foreach(var s in _sets)

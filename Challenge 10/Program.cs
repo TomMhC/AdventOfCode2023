@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics;
+using System.Reflection;
 
 namespace Challenge_10
 {
@@ -11,38 +12,55 @@ namespace Challenge_10
 
             Console.WriteLine(CalculateLowestLocation(problem));
 
+            var sw = new Stopwatch();
+            sw.Start();
+
             stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Challenge_10.Input.txt");
             problem = Parse(stream);
 
-            Console.WriteLine("Done!");
             Console.WriteLine(CalculateLowestLocation(problem));
+            Console.WriteLine("Done!");
+
+            sw.Stop();
+            Console.WriteLine(sw.ElapsedMilliseconds);
 
             Console.ReadLine();
+        }
+
+        static bool IsInSeed(Int64 val, Problem problem)
+        {
+            foreach(var s in problem.Seeds)
+            {
+                if (val >= s.Item1 && val < s.Item1 + s.Item2)
+                    return true;
+            }
+
+            return false;
         }
 
         static Int64 CalculateLowestLocation(Problem problem)
         {
             var minimum = Int64.MaxValue;
 
-            foreach (var tpl in problem.Seeds)
+            problem.Maps.Reverse();
+
+            for (var i = 0; i < 224309688; i++)
             {
-                Console.WriteLine(tpl.ToString());
+                if (i % 1000000 == 0)
+                    Console.WriteLine(i);
 
-                for (var i = 0; i < tpl.Item2; i++)
+                var x = (Int64)i;
+
+                foreach(var m in problem.Maps)
                 {
-                    var x = tpl.Item1 + i;
-
-                    foreach (var m in problem.Maps)
-                    {
-                        x = m.GetDestination(x);
-                    }
-
-                    if (x < minimum)
-                        minimum = x;
+                    x = m.GetSource(x);
                 }
+
+                if (IsInSeed(x, problem))
+                    return i;
             }
 
-            return minimum;
+            return -1;
         }
 
         static List<Tuple<Int64, Int64>> Parse(string seedLine)
