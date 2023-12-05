@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge 3", "Challenge 3\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge 4", "Challenge 4\Challenge 4.csproj", "{044BF3DA-F57C-467E-B7AE-346729CFBD7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge 5", "Challenge 5\Challenge 5.csproj", "{FF5609AB-C0AF-4E26-8D5A-E13F7B4EE305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge 5", "Challenge 5\Challenge 5.csproj", "{FF5609AB-C0AF-4E26-8D5A-E13F7B4EE305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge 6", "Challenge 6\Challenge 6.csproj", "{A131709B-855C-4204-8DA1-1655E06F9AB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge 6", "Challenge 6\Challenge 6.csproj", "{A131709B-855C-4204-8DA1-1655E06F9AB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge 7", "Challenge 7\Challenge 7.csproj", "{9E5E7AE6-9DE4-4D14-94BD-62FE2B7D3001}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A131709B-855C-4204-8DA1-1655E06F9AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A131709B-855C-4204-8DA1-1655E06F9AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A131709B-855C-4204-8DA1-1655E06F9AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5E7AE6-9DE4-4D14-94BD-62FE2B7D3001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5E7AE6-9DE4-4D14-94BD-62FE2B7D3001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5E7AE6-9DE4-4D14-94BD-62FE2B7D3001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5E7AE6-9DE4-4D14-94BD-62FE2B7D3001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
